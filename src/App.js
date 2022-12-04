@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback } from "react";
 
 import MoviesList from "./components/MoviesList";
 import "./App.css";
+import AddMovie from "./components/AddMovie";
 
 let timeoutID;
 function App() {
@@ -63,6 +64,9 @@ function App() {
 
   return (
     <React.Fragment>
+      <div>
+        <AddMovie/>
+      </div>
       <section>
         <button onClick={fetchMovieHandler}>Fetch Movies</button>
         {isTrying && <button onClick={cancelHandler}>Stop retrying</button>}
